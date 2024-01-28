@@ -15,37 +15,39 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.teal.shade800,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                color: Colors.red,
-                width: 100,
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 100,
-                      height: 100,
-                      color: Colors.yellow,
-                    ),
-                    Container(
-                      width: 100,
-                      height: 100,
-                      color: Colors.green,
-                    ),
-                  ],
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 75,
+                  backgroundImage: AssetImage('assets/images/tj.jpg'),
                 ),
-              ),
-              Container(
-                color: Colors.blue,
-                width: 100,
-              )
-            ],
+                SizedBox(height: 10),
+                Text(
+                  'Theodore Jasper Detweiler',
+                  style: TextStyle(
+                    fontFamily: 'pacifico',
+                    fontSize: 28,
+                    color: Colors.white,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Flutter Newbie'.toUpperCase(),
+                  style: TextStyle (
+                    fontFamily: 'sourcesans',
+                    fontSize: 18,
+                    color: Colors.teal.shade200,
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
